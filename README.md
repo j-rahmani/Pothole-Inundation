@@ -1,35 +1,65 @@
-# Inundation
+# Reproducible Code for *"Wetlands Set the Pace of Annual Runoff in the Northern Great Plains"*
 
-Reproducible Code for "Wetlands Set the Pace of Annual Runoff in the Northern Great Plains"  
-This research article is currently submitted to a scientific journal and is under review.
+This repository contains the analysis code developed for the manuscript currently under review.  
+It is designed to allow reviewers and readers to reproduce the figures and results presented in the paper.
 
+---
 
-## Project structure
+## 📂 Repository Structure
+```
 Pothole-Inundation/
 │── README.md
-│── requirements.txt	 # Required python libraries to run the code
-│── environment.yml      # (optional, for conda users)
+│── requirements.txt
+│── environment.yml
 │── LICENSE
-│── Analysis.py          # Main analysis script
-│── Data/                # Input files (not tracked in repo)
-│── Outputs/             # Generated figures
-│── Expected_Outputs/    # Expected figures
+│── src/
+│    ├── Analysis.py       # Main analysis script
+│    ├── Data/             # Input data (unzipped from `data.zip`)
+│    └── Outputs/          # Generated figures and tables
+│── Expected_Outputs/      # Reference figures for comparison
+```
 
+---
 
+## ⚙️ Installation
 
-### Installation Using Conda
-	conda env create -f environment.yml
-	conda activate Inundation
-	
-### Installation Using pip
-	pip install -r requirements.txt
-	
-#### Usage
-	Run the analysis:
-		python Analysis.py
-	Results (figures and processed datasets) will appear in the Pothole-Inundation/Outputs/ folder.
-	Compare the generated figures (Pothole-Inundation/Outputs/) with the expected ones (Pothole-Inundation/Expected_Outputs/).
-	
-	
-##### License
-This project is licensed under the MIT License — see the LICENSE file for details.
+### Option 1 — Using Conda (recommended)
+```bash
+conda env create -f environment.yml
+conda activate Inundation
+```
+
+### Option 2 — Using pip
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Running the Analysis
+1. **Unzip the dataset**  
+   Extract the provided `data.zip` archive into the folder:
+   ```
+   src/Data/
+   ```
+
+2. **Run the analysis**  
+   From the `src/` directory, run:
+   ```bash
+   python Analysis.py
+   ```
+
+3. **View results**  
+   - All generated figures and processed datasets will appear in:
+     ```
+     src/Outputs/
+     ```
+   - Compare the results with the reference figures provided in:
+     ```
+     Expected_Outputs/
+     ```
+
+---
+
+## 📜 License
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
